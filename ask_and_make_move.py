@@ -14,7 +14,7 @@ def make_move(x, y, player, board):
         board[x][y] = player
     else:
         print("That spot is already taken. Try again.")
-        ask_and_make_move(player, board)
+        ask_move(player)
 
 
 def ask_and_make_move(player, board):
