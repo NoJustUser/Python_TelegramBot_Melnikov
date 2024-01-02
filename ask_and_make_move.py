@@ -1,6 +1,6 @@
 def ask_move(player):
     # дать игроку возможность сделать ход, то есть  ввести координаты
-    x, y = input(f"{player}, enter x and y coordinates (e.g. 0 0): ").strip().split()
+    x, y = input(f"{player}, Введите координаты ячейки (напр. 0 0): ").strip().split()
     # преобразовать координаты в целые числа
     x, y = int(x), int(y)
     return x, y
@@ -13,7 +13,7 @@ def make_move(x, y, player, board):
         # если свободно, записать значение игрока (Х или 0) в ячейку
         board[x][y] = player
     else:
-        print("That spot is already taken. Try again.")
+        print("Клетка занята, попробуйте снова.")
         ask_move(player)
 
 
