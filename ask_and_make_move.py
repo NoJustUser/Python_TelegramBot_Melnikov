@@ -15,3 +15,4 @@ def make_move(x, y, player, board):
 def ask_and_make_move(player, board):
     x, y = ask_move(player, board)
     make_move(x, y, player, board)
+    return board
