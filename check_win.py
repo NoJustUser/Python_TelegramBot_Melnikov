@@ -14,12 +14,11 @@ def check_win(player, board):
     def check_list(lst):
         tmp = 0
         for value in lst:
-            if value == player and value is not ' ':
+            if value == player and value != ' ':
                 tmp += 1
         return tmp == 3
 
     for v in collection:
         if check_list(v):
-            print(f'Игрок {player} - вы выиграли !')
             return True
     return False

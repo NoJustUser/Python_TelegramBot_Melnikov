@@ -5,8 +5,9 @@ def ask_move(player, board):
     # находится ли координата в пределах поля и свободно ли место
     if (0 <= x <= 2) and (0 <= y <= 2) and (board[x][y] == " "):
         return x, y
-    print('Клетка занята. Введите координаты еще раз.')
-    ask_move(player, board)
+    else:
+        print('Клетка занята. Введите координаты еще раз.')
+        return ask_move(player, board)
 
 
 def make_move(x, y, player, board):
