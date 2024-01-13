@@ -8,8 +8,6 @@ def edit_note():
         note_text = input('Введите текст заметки для обновления : ')
         build_note(note_text, note_name)
         return True
-    print('Заметка не найдена.\n')
+    print('Заметка не найдена.')
     return False
 
-
-edit_note()
