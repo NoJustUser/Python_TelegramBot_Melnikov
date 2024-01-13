@@ -9,6 +9,8 @@ def read_note():
             data = file.read()
         for line in data:
             print(line, end='')
-    else:
-        print('Файл не найден')
+        print('\n')
+        return note_
+    print('Заметка не найдена.')
+    return False
 
