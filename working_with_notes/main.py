@@ -17,9 +17,13 @@ for key, value in options_for_action.items():
     print('\t\t', key, value[0])
 
 while True:
-    key = input('Выберите необходимое действие : ')
-    if key == '6':
-        print('Вы вышли из программы.')
+    try:
+        key = input('Выберите необходимое действие : ')
+        if key == '6':
+            print('Вы вышли из программы.')
+            break
+        func = options_for_action.get(key)[1]
+        eval(f'{func}()')
+    except:
+        print('Произошла ошибка.')
         break
-    func = options_for_action.get(key)[1]
-    eval(f'{func}()')
